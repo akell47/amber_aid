@@ -15,7 +15,10 @@
   - `git init` will make a git repository in your current directory location that is why you change directory to your workspace/directory/folder first
 2. open your git in atom `atom .`
   - atom is a text editor. This is where you write your code then use git bash to make commands to view the status of the code, to confirm edits to the code, and to push the edits up to git hub.
-  - make a file in your directory in your text editor ?? or also make new files in git bash ??? make new file [fielname].md
+  - You can create a new file in this directory using one of 2 methods.  Both methods do the same thing, add a file to the directory on your operating system.
+    1. left click on the directory in the gutter of atom and choose to create a file.
+    2. in your command line terminal (git bash) type the command from within your directory `touch [filename].md`
+      - this is a weird name that does create the file but the name doesn't really make sense here `¯\_(ツ)_/¯`
     - .md stands for markdown it is like metadata for code. like a text document.
 3. make code or just type stuff in your .md file then version management steps below
 4. check status of git directory `git status`
@@ -33,4 +36,22 @@
  - yay! see your changes on github!
 5. pull git down `git pull`
   - `git pull` will tell you an update about the latest changes to your git/code/repository
-???  - ???? start wit `git pull` or `git init`  or `git clone`??
+
+#### The general flow is this.
+###### if you want to start a new project from scratch, where no one has anything yet
+  1. create a new directory, `cd` into it, and initialize it as a git repository with the command `git init` (you will automatically be on the master branch)
+  2. make some files, write some stuff
+  3. `git add <files you want to commit>` to add the changes to staging
+  4. `git commit -m <some message that describes the changes>` to commit those changes to your local repo.  Imagine an invisible set of files that you want to send up to the remote repo.
+  4. Go to github and start a new project
+  4. in your command line do what it says on github, something like `git remote add origin <url to your project>`
+  5. `git push origin master` pushes your local repo up to your remote repo
+  6. if someone else does something to the repo you want to make your local repo reflect that, so you `git pull` to "pull" down the changes they made from the remote repo.
+
+###### If you're starting on someone else's project
+  1. Go to github and find their project
+  2. copy the url github provides you (not what you see in the address bar)
+  3. in the command line `git clone <project url>`
+  4. `ls` to find the name of the repo that just got cloned
+  5. `cd` into the newly cloned repo
+  6. do steps 1 - 6 from above
