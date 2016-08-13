@@ -34,8 +34,10 @@
   - this is like a little packet of edits you are ready to push up to github and you give the edits a little name
 4. you can `git push` to move your local changes up to the remote Github
  - yay! see your changes on github!
-5. pull git down `git pull`
-  - `git pull` will tell you an update about the latest changes to your git/code/repository
+ On the same repo- going forward first thing to continue on project:
+5. pull git down `git pull origin master`
+  - pulls down the latest changes to your git/code/repository;
+  - makes local master current with remote master
 
 #### The general flow is this.
 ###### if you want to start a new project from scratch, where no one has anything yet
@@ -55,3 +57,17 @@
   4. `ls` to find the name of the repo that just got cloned
   5. `cd` into the newly cloned repo
   6. do steps 1 - 6 from above
+
+#### Merge pull request
+  1. `git branch` lists out other branches which include pull requests
+  2. make local branch `git checkout -b [branch name]`
+  3. `git pull origin [branch name]`
+    Example Returns: From https://github.com/akell47/amber_aid
+      * branch            improves-git-flow -> FETCH_HEAD
+        Merge made by the 'recursive' strategy.
+        git.md | 25 +++++++++++++++++++++++--
+        1 file changed, 23 insertions(+), 2 deletions(-)
+  4. `git checkout master` change over to master branch because will    merge the pull request into master branch      
+  4. `git merge [branch name]` merges other branch to master branch locally
+  5. `git push origin` pushes merged master branch back up to github
+  yay!
