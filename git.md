@@ -42,11 +42,17 @@
 #### The general flow is this.
 ###### if you want to start a new project from scratch, where no one has anything yet
   1. create a new directory, `cd` into it, and initialize it as a git repository with the command `git init` (you will automatically be on the master branch)
+    - in text editor files tree in your new repo/project folder you see a .git Folder. like making your local folder git enabled
   2. make some files, write some stuff
   3. `git add <files you want to commit>` to add the changes to staging
   4. `git commit -m <some message that describes the changes>` to commit those changes to your local repo.  Imagine an invisible set of files that you want to send up to the remote repo.
   4. Go to github and start a new project
-  4. in your command line do what it says on github, something like `git remote add origin <url to your project>`
+  4. in your command line do what it says on github, something like `git remote add origin https://github.com/user/newrepo.git`
+    - making the new repo on github
+    - no < >
+    - ends in `.git`
+    - `newrepo` is the same name of your project folder
+    - `newrepo` is the
   5. `git push origin master` pushes your local repo up to your remote repo
   6. if someone else does something to the repo you want to make your local repo reflect that, so you `git pull` to "pull" down the changes they made from the remote repo.
 
