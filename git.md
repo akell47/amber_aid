@@ -1,46 +1,53 @@
 #Git
 
 //the Github workflow//
-
+## After you make a github account online
 0. First for real open the computer's command line
   - for windows click on the start and type "cmd"
-    - this black box is where you type commands and this is how you begin your journey with git. Now you can start the "git guide."
-  - once you have a git set up and you want to keep working you are going   to use another command line that is more customized for git and it has fun colors. This is called git bash and is a command line. You type commands where the dollar sign is.
-1. `cd` change directory aka folder to your desired workspace
+    - this black box is where you type commands and this is how you talk to your computer and begin your journey with git, coding, and making stuff happen.
+  - once you have a github set up and you want to keep working you are going to use another command line that is more customized for git and it has fun colors. This is called git bash and is a command line. You type commands where the dollar sign is.
+1. b `cd` change directory aka folder to your desired workspace
   - to find directories type `ls` then type `cd [directory]`
     - like opening a folder in windows explorer
   - `mk dir` makes a new directory aka folder
-1.  First thing you need to do when starting a new repo is `git init`.
+  - pay attention the yellow filepath so you know you are in the place/ folder you want to be in.
+1. b  First thing you need to do when starting a new repo is `git init`.
   - a repo is a repository. This is like a folder
   - `git init` will make a git repository in your current directory location that is why you change directory to your workspace/directory/folder first
 2. open your git in atom `atom .`
   - atom is a text editor. This is where you write your code then use git bash to make commands to view the status of the code, to confirm edits to the code, and to push the edits up to git hub.
   - You can create a new file in this directory using one of 2 methods.  Both methods do the same thing, add a file to the directory on your operating system.
-    1. left click on the directory in the gutter of atom and choose to create a file.
-    2. in your command line terminal (git bash) type the command from within your directory `touch [filename].md`
-      - this is a weird name that does create the file but the name doesn't really make sense here `¯\_(ツ)_/¯`
-    - .md stands for markdown it is like metadata for code. like a text document.
+  * another good text editor is sublime. You can also write code in an IDE - Integrated Desktop Environment. You can have your larger code file and a practice input output space and your terminal in one application. In short you can open up applications from the command line as well.
+  - non IDE the code you write can run in your command line which is the terminal. for example to run python code type `python filename.file` to run the functions/ code etc.
+    2. in your command line terminal (git bash) type the command from within your directory `touch [filename].file`
+      - `.file` meaning like `.py` or `.md` or `.html` or whatever file type you need to create.
+      - this is a weird name `¯\_(ツ)_/¯`
+      - .md stands for markdown it is like metadata for code. like a text document.
 3. make code or just type stuff in your .md file then version management steps below
 4. check status of git directory `git status`
   - if you did not save
   - if you did not make any changes
       then then it will say "your branch is up-to-date with 'origin master' nothing to commit, working tree clean"
-  - after you save your code in your text editor git status will show you "modified: [fielname].md" in red text
+  - after you save your code in your text editor git status will show you "modified: [fielname].md" in red text new files will be in red under text that says "Untracked files:"
 2. add all files `git add .` then check status again in 1.
   - this is like saving/updating the changes in the command line space.
+  - `git add.` adds all the new files in your current path.
   - after you check the status again with `git status`
-  - this time it should be green and will say "modified: [filename].md"
+  - this time it should be green and will say "modified: [filename].file"
 3. `git commit -m "info about edits"`
   - this is like a little packet of edits you are ready to push up to github and you give the edits a little name
+  - if you added new files but did not `git .` added them the new file will not be included in the commit.
+  - once the file is up in the remote repo online you don't need to do `git add filename.file` after the file is there you just commit changes to it going forward. *or you still do git add??*
 4. you can `git push` to move your local changes up to the remote Github
  - yay! see your changes on github!
  On the same repo- going forward first thing to continue on project:
 5. pull git down `git pull origin master`
   - pulls down the latest changes to your git/code/repository;
   - makes local master current with remote master
+*5* also note that you need to accept/deal with any other changes that have happened to your remote githup repository before you push your local changes to origin master.
 
-#### The general flow is this.
-###### if you want to start a new project from scratch, where no one has anything yet
+
+##### if you want to start a new project from scratch, where no one has anything yet
   1. create a new directory, `cd` into it, and initialize it as a git repository with the command `git init` (you will automatically be on the master branch)
     - in text editor files tree in your new repo/project folder you see a .git Folder. like making your local folder git enabled
   2. make some files, write some stuff
@@ -55,6 +62,10 @@
     - `newrepo` is the
   5. `git push origin master` pushes your local repo up to your remote repo
   6. if someone else does something to the repo you want to make your local repo reflect that, so you `git pull` to "pull" down the changes they made from the remote repo.
+
+###### Pull your own repo down to your computer
+ 1. 'git clone /path/to/repository'
+ ???
 
 ###### If you're starting on someone else's project
   1. Go to github and find their project
@@ -77,3 +88,12 @@
   4. `git merge [branch name]` merges other branch to master branch locally
   5. `git push origin` pushes merged master branch back up to github
   yay!
+
+
+### Branches
+  versions of repo called branches
+  don't make a change to the master branch directly
+  1. `get checkout -b "branchname git URL"``
+  2. `clone`
+  3. `git branch` list the current branch you are on
+  3. `git branch branchname` create a branch
