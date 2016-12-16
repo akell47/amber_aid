@@ -63,11 +63,7 @@
   5. `git push origin master` pushes your local repo up to your remote repo
   6. if someone else does something to the repo you want to make your local repo reflect that, so you `git pull` to "pull" down the changes they made from the remote repo.
 
-###### Pull your own repo down to your computer
- 1. 'git clone /path/to/repository'
- ???
-
-###### If you're starting on someone else's project
+###### If you're starting on someone else's project or your own on a new computer
   1. Go to github and find their project
   2. copy the url github provides you (not what you see in the address bar)
   3. in the command line `git clone <project url>`
